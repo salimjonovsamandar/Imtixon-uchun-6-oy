@@ -9,9 +9,6 @@ import Products from "../src/components/Products";
 import More from "../src/components/More";
 import NoPages from "../src/components/NoPages";
 
-
-
-
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -35,6 +32,7 @@ function App() {
         <Route path="/products/:id" element={<More />} />
         <Route path="*" element={<NoPages />} />
       </Routes>
+
     </BrowserRouter>
   );
 }

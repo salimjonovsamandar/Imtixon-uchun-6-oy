@@ -215,3 +215,11 @@
   width: 70%;
   justify-content: space-between;
 }
+.join {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-right: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}

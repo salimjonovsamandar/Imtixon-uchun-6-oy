@@ -11,7 +11,7 @@ function index({ darkMode, setDarkMode }) {
     };
 
     return (
-        <div className={darkMode ? 'dark-mode' : ''}>
+        <div className={darkMode ? 'darkMode' : ''}>
             <div className={styles.header}>
                 <div className={styles.login}>
                     <NavLink className={styles.guest} to="/">
