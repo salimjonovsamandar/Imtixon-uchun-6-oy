@@ -1,0 +1,41 @@
+.about {
+  width: 100%;
+  max-width: 1152px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 86px;
+}
+.h3 {
+  font-size: 3.75rem;
+  margin-right: 20px;
+  font-weight: 700;
+  line-height: 1;
+  color: #394e6a;
+  letter-spacing: -0.025em;
+}
+
+.confy {
+  background-color: rgb(5, 122, 255);
+  padding: 7px 24px;
+  font-size: 36px;
+  font-weight: 700;
+  border-radius: 16px;
+  letter-spacing: 3.6px;
+  color: #dbe1ff;
+}
+.p {
+  margin-top: 24px;
+  width: 670px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  color: rgb(57, 78, 106);
+}

@@ -1,0 +1,93 @@
+.header {
+  background-color: #021431;
+  text-align: end;
+  height: 36px;
+  gap: 24px;
+}
+.login {
+  width: 100%;
+  max-width: 1152px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.guest {
+  display: inline-block;
+  color: #c7c9d1;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  padding: 8;
+  margin-left: 24px;
+  transition: all 0.5s;
+  &:hover {
+    color: #057aff;
+  }
+}
+.account {
+  display: inline-block;
+  color: #c7c9d1;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  padding: 10px;
+  margin-left: 24px;
+  transition: all 0.5s;
+  &:hover {
+    color: #057aff;
+  }
+}
+.logo {
+  text-decoration: none;
+  font-size: 30px;
+  border: 1px solid #057aff;
+  border-radius: 8px;
+  font-weight: 600;
+  line-height: 36px;
+  color: #dbe1ff;
+  padding: 6px 16px;
+  background-color: #057aff;
+}
+.section {
+  background-color: #f0f6ff;
+}
+.main {
+  width: 100%;
+  max-width: 1152px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+.Navigation {
+  text-decoration: none;
+}
+.Navigation {
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 300px;
+  line-height: 1.25rem;
+  border: 1px solid #f0f6ff;
+  transition: all 0.5s;
+  color: #394e6a;
+  &:hover {
+    background-color: #d9e3f2;
+    border: 1px solid #d9e3f2;
+  }
+  &:focus {
+    background: rgb(2, 20, 49);
+    color: #dbe1ff;
+  }
+}
+.dark {
+  display: flex;
+  gap: 20px;
+}
+.section {
+  border: none;
+  cursor: pointer;
+}

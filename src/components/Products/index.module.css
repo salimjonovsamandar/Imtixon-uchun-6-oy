@@ -1,0 +1,217 @@
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1088px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 10px;
+  background-color: rgb(240, 246, 255);
+  margin-top: 80px;
+  padding: 16px 20px;
+  flex-wrap: wrap;
+  border-radius: 6px;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+}
+.product label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgb(57, 78, 106);
+  padding: 8px 4px;
+}
+.price_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 42px;
+}
+.price_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0px;
+}
+.price_bottom label {
+  padding-bottom: 0px;
+}
+.checkbox {
+  align-items: center;
+  text-align: center;
+  margin-top: 42px;
+  flex-wrap: wrap;
+}
+.checkbox p {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgb(57, 78, 106);
+  padding: 8px 4px;
+}
+.btn {
+  width: 500px;
+  margin-top: 58px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.btn button:last-child {
+  margin-left: 20px;
+}
+.section_container {
+  width: 100%;
+  max-width: 1088px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.changeWrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 10px;
+  border-bottom: 2px solid lightgray;
+  justify-content: space-between;
+}
+.changeButtons {
+  gap: 30px;
+  /* margin-top: 50px; */
+  /* margin-bottom: 20px; */
+}
+
+.card {
+  width: 352px;
+  height: 332px;
+  border-radius: 16px;
+  text-transform: capitalize;
+  cursor: pointer;
+  padding: 16px;
+  box-shadow: 0px 8px 10px -6px rgba(0, 0, 0, 0.1),
+    0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0);
+  transition: all 0.5s;
+  &:hover {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+}
+.card_img {
+  height: 192px;
+  overflow: hidden;
+}
+
+.card_img img {
+  height: 192px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+
+  border-radius: 12px;
+}
+.card_text {
+  padding: 32px;
+}
+.card_text h4 {
+  text-align: center;
+  color: rgb(57, 78, 106);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.card_text h5 {
+  margin-top: 8px;
+  color: rgb(70, 58, 161);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.wrapper {
+  width: 100%;
+  max-width: 1088px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+.changeWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards {
+  width: 100%px;
+  height: 200px;
+  border-radius: 16px;
+  text-transform: capitalize;
+  cursor: pointer;
+  flex-direction: column;
+  padding: 16px;
+  box-shadow: 0px 8px 10px -6px rgba(0, 0, 0, 0.1),
+    0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0);
+  transition: all 0.5s;
+  &:hover {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+}
+.wrappers {
+  width: 100%;
+  max-width: 1088px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 40px;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.card_imgs img {
+  width: 200px;
+  height: 150px;
+  margin-right: 60px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.CardTitle {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.CardTitle h3 {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: rgb(57, 78, 106);
+}
+.CardTitle h4 {
+  color: rgb(199, 201, 209);
+  font-size: inherit;
+  font-weight: inherit;
+}
+.card_texts h5 {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: rgb(57, 78, 106);
+}
+.card_texts {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+}
