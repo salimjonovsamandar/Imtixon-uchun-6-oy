@@ -76,13 +76,17 @@ function index() {
     try {
       const response = await fetch(`https://strapi-store-server.onrender.com/api/products?page=${currentPage}`);
       const data = await response.json();
-      setFilter(data);
-      console.log(data);
+      setFilter(data.data);
       setTotalPages(Math.ceil(data.total / data.limit));
+      setLoading(false);
+      console.log(data);
     } catch (error) {
       console.error('Error fetching products:', error);
+      setLoading(false);
     }
   };
+  useEffect(() => {
+  }, [filter])
 
   const nextPage = () => {
     setCurrentPage(currentPage + 1);
