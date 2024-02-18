@@ -1,3 +1,4 @@
+/*Header qism */
 .header {
   background-color: var(--nav-bgcolor-light);
   text-align: end;
@@ -38,6 +39,12 @@
     color: #057aff;
   }
 }
+/*Nav qism */
+.section {
+  background-color: var(--header-bgcolor-light);
+  border: none;
+  cursor: pointer;
+}
 .logo {
   text-decoration: none;
   font-size: 30px;
@@ -48,9 +55,6 @@
   color: #dbe1ff;
   padding: 6px 16px;
   background-color: var(--logo-blue-color-light);
-}
-.section {
-  background-color: var(--header-bgcolor-light);
 }
 .main {
   width: 100%;
@@ -63,14 +67,12 @@
   padding: 15px;
 }
 .Navigation {
-  text-decoration: none;
-}
-.Navigation {
   padding: 8px 15px;
   border-radius: 8px;
   font-size: 0.875rem;
   font-weight: 300px;
   line-height: 1.25rem;
+  text-decoration: none;
   border: 1px solid transparent;
   transition: all 0.5s;
   color: var(--text-color-light);
@@ -86,8 +88,4 @@
 .dark {
   display: flex;
   gap: 20px;
-}
-.section {
-  border: none;
-  cursor: pointer;
 }

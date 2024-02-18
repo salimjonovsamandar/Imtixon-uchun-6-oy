@@ -17,7 +17,8 @@ function App() {
   const [info, setInfo] = useState([])
   const [mood, setMood] = useLocalStorageState(true)
 
-  //shu yerda useContext ishlatishgan 
+  //useMemo hooki More papkani ichida ishlatilgan
+  // useContext orqali olish uchun shunday qilingan 
   useEffect(() => {
     fetch("https://strapi-store-server.onrender.com/api/products?featured=true")
       .then(res => res.json())
@@ -47,5 +48,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

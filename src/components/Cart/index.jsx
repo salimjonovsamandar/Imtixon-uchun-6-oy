@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 
 function index() {
     const { t, i18n } = useTranslation();
+
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>

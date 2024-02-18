@@ -1,19 +1,20 @@
 import React from 'react'
 import styles from "./index.module.css";
 import { NavLink, } from "react-router-dom";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Loader from "../Loader"
 import Cards from "../Home/Cards"
 import { useTranslation } from "react-i18next";
-import { FaSun, FaMoon } from 'react-icons/fa'
 
 function index() {
+  
   const { t, i18n } = useTranslation();
   const [loading, setLoading] = useState(true);
 
   setTimeout(() => {
     setLoading(false);
   }, 1000);
+
   return (
     <div>
       {
@@ -43,12 +44,8 @@ function index() {
                   </div>
                 </div>
               </div>
-              <div className={styles.main_section}>
-                <h2>{t("fatured")}</h2>
-              </div>
-              <div className={styles.wrapper}>
-                <Cards></Cards>
-              </div>
+              <div className={styles.main_section}><h2>{t("fatured")}</h2></div>
+              <div className={styles.wrapper}><Cards></Cards></div>
             </div>
           </>
         )

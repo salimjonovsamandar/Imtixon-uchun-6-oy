@@ -16,14 +16,12 @@
   height: 192px;
   overflow: hidden;
 }
-
 .card_img img {
   height: 192px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   object-fit: cover;
-
   border-radius: 12px;
 }
 .card_text {

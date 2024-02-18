@@ -4,6 +4,7 @@ import { CardInfo } from "../../../App";
 import styles from "./index.module.css";
 
 export default function Card() {
+    //Shu yerda useContext dan foydalanganman
     const info = useContext(CardInfo);
     return (
         <>

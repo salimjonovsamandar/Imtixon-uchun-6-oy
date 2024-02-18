@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./index.module.css";
 
-function index() {
+function Loader() {
     return (
         <div className={styles.loader}>
             <span className="loading loading-ring loading-xs"></span>
@@ -14,4 +14,4 @@ function index() {
         </div>
     )
 }
-export default index
+export default Loader

@@ -38,6 +38,12 @@
   color: var(--text-color-light);
   margin-bottom: 1.5rem;
 }
+.description h5 {
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  color: var(--text-color-light);
+  margin-bottom: 5px;
+}
 .description p {
   line-height: 2rem;
   color: var(--text-color-light);
@@ -56,12 +62,6 @@
   &:active {
     border: 1px solid black;
   }
-}
-.description h5 {
-  letter-spacing: 0.05em;
-  font-weight: 500;
-  color: var(--text-color-light);
-  margin-bottom: 5px;
 }
 .selects {
   flex-direction: column;

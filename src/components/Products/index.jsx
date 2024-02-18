@@ -31,7 +31,6 @@ function index() {
         setLoading(false);
       })
   }
-
   useEffect(() => {
     getData()
   }, [])
@@ -56,7 +55,6 @@ function index() {
 
     }
   }
-
   useEffect(() => {
   }, [filter])
 
@@ -87,15 +85,12 @@ function index() {
       setLoading(false);
     }
   };
-
   const nextPage = () => {
     setCurrentPage(currentPage + 1);
   };
-
   const previousPage = () => {
     setCurrentPage(currentPage - 1);
   };
-
   useEffect(() => {
     fetchProducts();
   }, [currentPage]);

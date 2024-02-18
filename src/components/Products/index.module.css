@@ -85,7 +85,6 @@
 .changeButtons {
   gap: 30px;
 }
-
 .card {
   width: 352px;
   height: 332px;
@@ -105,14 +104,12 @@
   height: 192px;
   overflow: hidden;
 }
-
 .card_img img {
   height: 192px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   object-fit: cover;
-
   border-radius: 12px;
 }
 .card_text {
@@ -150,7 +147,6 @@
   display: flex;
   justify-content: space-between;
 }
-
 .cards {
   width: 100%px;
   height: 200px;
@@ -177,11 +173,9 @@
 .cards {
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
   justify-content: center;
   margin-top: 50px;
 }
-
 .card_imgs img {
   width: 200px;
   height: 150px;
