@@ -34,7 +34,7 @@ function Index() {
                 <Loader />
             ) : (
                 <div className={styles.container}>
-                    <img src="https://images.pexels.com/photos/3679601/pexels-photo-3679601.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
+                    <img src={data.image} alt="" />
                     <div className={styles.description}>
                         <h2>{data.title}</h2>
                         <h3>{data.company}</h3>
