@@ -1,7 +1,8 @@
 import styles from "./index.module.css";
-import { useState, useRef, useContext, useEffect } from 'react'
-import { NavLink, useNavigate } from "react-router-dom";
+import { useState, useRef, useEffect } from 'react'
+import { useNavigate } from "react-router-dom";
 import Loader from "../Loader"
+import { useTranslation } from "react-i18next";
 
 function index() {
   const [filter, setFilter] = useState([]);
@@ -16,6 +17,7 @@ function index() {
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const { t, i18n } = useTranslation();
 
   //Hamma ma'lumotlarni olib kelish uchun
   function getData() {
@@ -47,11 +49,11 @@ function index() {
       const response = await fetch(URL);
       const data = await response.json();
       setFilter(data.data);
-      setLoading(false);
+
       DeleteInputValue()
     } catch (err) {
       console.log(err);
-      setLoading(false);
+
     }
   }
 
@@ -99,30 +101,30 @@ function index() {
   }, [currentPage]);
 
   return (
-    <div>
+    <div className={styles.container}>
       {
         loading ? <Loader /> : (
           <>
             <form className={styles.form}>
               <div className={styles.product}>
-                <label >Search Product</label>
+                <label >{t("search")}</label>
                 <input ref={searchInput} type="text" placeholder="Type here" className="input input-bordered input-sm w-80 " />
               </div>
               <div className={styles.product}>
-                <label >Select Category</label>
+                <label>{t("category")}</label>
                 <select ref={categorySelect} className="select select-bordered select-sm w-80 ">
-                  <option value="all">All</option>
-                  <option value="Tables">Tables</option>
-                  <option value="Chairs">Chairs</option>
-                  <option value="Kids">Kids</option>
-                  <option value="Sofas">Sofas</option>
-                  <option value="Beds">Beds</option>
+                  <option value="all">{t("all")}</option>
+                  <option value="Tables">{t("tables")}</option>
+                  <option value="Chairs">{t("chairs")}</option>
+                  <option value="Kids">{t("kids")}</option>
+                  <option value="Sofas">{t("sofas")}</option>
+                  <option value="Beds">{("beds")}</option>
                 </select>
               </div>
               <div className={styles.product}>
-                <label>Select Company</label>
+                <label>{t("company")}</label>
                 <select ref={companySelect} className="select select-bordered select-sm w-80 ">
-                  <option value="all">All</option>
+                  <option value="all">{t("all")}</option>
                   <option value="Modenza">Modenza</option>
                   <option value="Luxora">Luxora</option>
                   <option value="Artifex">Artifex</option>
@@ -132,7 +134,7 @@ function index() {
               </div>
               <div className={styles.product}>
                 <div className={styles.price_top}>
-                  <label>select price</label>
+                  <label>{("price")}</label>
                   <label>${price}</label>
                 </div>
                 <input ref={priceRange} min="0" max="100000" onChange={handleChange} type="range" value={price} className="range range-info range-sm w-64 " />
@@ -142,18 +144,18 @@ function index() {
                 </div>
               </div>
               <div className={styles.checkbox}>
-                <p>Free Shipping</p>
+                <p>{t("free")}</p>
                 <input type="checkbox" ref={freeShippingCheckbox} className="checkbox checkbox-info " />
               </div>
               <div className={styles.btn}>
-                <button onClick={handleFilter} style={{ fontSize: "16px" }} className="btn btn-secondary  w-60">Search</button>
-                <button onClick={((e) => { e.preventDefault(), getData(), DeleteInputValue() })} style={{ color: "white", fontSize: "16px" }} className="btn btn-info w-60">Reset</button>
+                <button onClick={handleFilter} style={{ fontSize: "16px" }} className="btn btn-secondary  w-60">{t("searchBtn")}</button>
+                <button onClick={((e) => { e.preventDefault(), getData(), DeleteInputValue() })} style={{ color: "white", fontSize: "16px" }} className="btn btn-info w-60">{t("reset")}</button>
               </div>
             </form>
 
             <div className={styles.section_container}>
               <div className={styles.changeWrapper}>
-                <p>{filter.length} <span><b> Products</b></span></p>
+                <p>{filter.length} <span><b>{t("productpage")}</b></span></p>
                 <div className={styles.changeButtons}>
                   <button
                     onClick={() => {

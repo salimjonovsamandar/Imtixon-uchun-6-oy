@@ -9,8 +9,6 @@ import Products from "../src/components/Products";
 import More from "./components/More";
 import NoPages from "../src/components/NoPages";
 import useLocalStorageState from 'use-local-storage-state'
-import Loader from "./components/Loader"
-
 
 export const CardInfo = React.createContext(null)
 

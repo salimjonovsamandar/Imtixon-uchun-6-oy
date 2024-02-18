@@ -1,13 +1,16 @@
 import React from 'react'
 import styles from "./index.module.css";
 import { NavLink, } from "react-router-dom";
-import { useState } from 'react';
-
+import { useState, useEffect } from 'react';
 import Loader from "../Loader"
 import Cards from "../Home/Cards"
+import { useTranslation } from "react-i18next";
+import { FaSun, FaMoon } from 'react-icons/fa'
 
 function index() {
+  const { t, i18n } = useTranslation();
   const [loading, setLoading] = useState(true);
+
   setTimeout(() => {
     setLoading(false);
   }, 1000);
@@ -19,9 +22,9 @@ function index() {
             <div className={styles.container}>
               <div className={styles.main}>
                 <div className={styles.main_title}>
-                  <h3>We are changing the way people shop</h3>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore repellat explicabo enim soluta temporibus asperiores aut obcaecati perferendis porro nobis.</p>
-                  <NavLink className={styles.button} to="/Products"> Our Products </NavLink>
+                  <h3>{t("mision")}</h3>
+                  <p>{t("description")}</p>
+                  <NavLink className={styles.button} to="/Products">{t("our")}</NavLink>
                 </div>
                 <div className={styles.main_slider}>
                   <div className="carousel carousel-center  max-w-xl p-4 space-x-4 bg-neutral rounded-box">
@@ -41,7 +44,7 @@ function index() {
                 </div>
               </div>
               <div className={styles.main_section}>
-                <h2>Featured products</h2>
+                <h2>{t("fatured")}</h2>
               </div>
               <div className={styles.wrapper}>
                 <Cards></Cards>

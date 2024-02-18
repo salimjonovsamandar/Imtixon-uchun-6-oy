@@ -1,22 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --toastify-text-color-light: rgb(57, 78, 106);
-  --toastify-text-color-mood: rgb(248, 248, 242);
-
-/* 
-  --toastify-color-info: #3498db;
-  --toastify-text-color-light: #757575;
-  --toastify-text-color-dark: #fff; */
-}
-.darkMood{
-  /* --toastify-text-color-light: rgb(57, 78, 106); */
-}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Segoe UI Regular";
+}
+
+:root {
+  --text-color-light: rgb(57, 78, 106);
+  --logo-blue-color-light: rgb(5, 122, 255);
+  --header-bgcolor-light: #f0f6ff;
+  --button-bgcolor-light: rgb(2, 20, 49);
+  --nav-bgcolor-light: rgb(2, 20, 49);
+  --nav-color-light: rgb(248, 248, 242);
+  --body-bg-color: #272935;
+  --text-color-mood: rgb(248, 248, 242);
+  --form-bgcolor: #f0f6ff;
+}
+
+[data-theme="light"] {
+  --text-color-light: rgb(57, 78, 106);
+  --logo-blue-color-light: rgb(5, 122, 255);
+  --header-bgcolor-light: #f0f6ff;
+  --button-bgcolor-light: rgb(2, 20, 49);
+  --nav-bgcolor-light: rgb(2, 20, 49);
+  --nav-color-light: rgb(248, 248, 242);
+  --body-bg-color: #ffffff;
+  --form-bgcolor: #f0f6ff;
+}
+
+[data-theme="dark"] {
+  --text-color-light: rgb(248, 248, 242);
+  --header-bgcolor-light: #181920;
+  --logo-blue-color-light: #ff7ac6;
+  --nav-color-light: rgb(248, 248, 242);
+  --body-bg-color: #272935;
+  --nav-bgcolor-light: #414558;
+  --form-bgcolor: #181920;
 }
