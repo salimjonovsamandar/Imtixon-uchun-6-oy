@@ -6,34 +6,47 @@ import Header from "../src/components/Header";
 import Cart from "../src/components/Cart";
 import Home from "../src/components/Home";
 import Products from "../src/components/Products";
-import More from "../src/components/More";
+import More from "./components/More";
 import NoPages from "../src/components/NoPages";
+import useLocalStorageState from 'use-local-storage-state'
+import Loader from "./components/Loader"
+
+
+export const CardInfo = React.createContext(null)
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [info, setInfo] = useState([])
+  const [mood, setMood] = useLocalStorageState(true)
 
+  //shu yerda useContext ishlatishgan 
   useEffect(() => {
-    const isDarkMode = localStorage.getItem('darkMode') === 'true';
-    setDarkMode(isDarkMode);
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('darkMode', darkMode);
-  }, [darkMode]);
+    fetch("https://strapi-store-server.onrender.com/api/products?featured=true")
+      .then(res => res.json())
+      .then(data => {
+        setInfo(data.data)
+        setLoading(false);
+      })
+      .catch(err => console.log(err))
+    setLoading(false);
+  }, [])
 
   return (
-    <BrowserRouter>
-      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Products" element={<Products />} />
-        <Route path="/Cart" element={<Cart />} />
-        <Route path="/products/:id" element={<More />} />
-        <Route path="*" element={<NoPages />} />
-      </Routes>
-
-    </BrowserRouter>
+    <div className="mode" data-theme={mood ? "light" : "dark"}>
+      <CardInfo.Provider value={info}>
+        <BrowserRouter >
+          <Header mode={mood} change={setMood} />
+          <Routes>
+            <Route path="/" element={<Home></Home>}></Route>
+            <Route path="/About" element={<About></About>}></Route>
+            <Route path="/Products" element={<Products></Products>}></Route>
+            <Route path="/products/:id" element={<More></More>}></Route>
+            <Route path="/Cart" element={<Cart></Cart>}></Route>
+            <Route path="*" element={<NoPages></NoPages>}></Route>
+          </Routes>
+        </BrowserRouter>
+      </CardInfo.Provider>
+    </div>
   );
 }
 

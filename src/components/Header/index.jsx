@@ -4,14 +4,18 @@ import { NavLink } from "react-router-dom";
 import { FaSun, FaMoon } from 'react-icons/fa'
 
 
-function index({ darkMode, setDarkMode }) {
+function index(darkMode) {
 
-    const handleDarkModeToggle = () => {
-        setDarkMode((prevMode) => !prevMode);
-    };
+    function changeMode() {
+        if (darkMode.mode) {
+            darkMode.change(false)
+        } else {
+            darkMode.change(true)
+        }
+    }
 
     return (
-        <div className={darkMode ? 'darkMode' : ''}>
+        <div>
             <div className={styles.header}>
                 <div className={styles.login}>
                     <NavLink className={styles.guest} to="/">
@@ -44,10 +48,9 @@ function index({ darkMode, setDarkMode }) {
                         </NavLink>
                     </div>
                     <div className={styles.dark}>
-                        <button onClick={handleDarkModeToggle}>
-                            {darkMode ? <FaSun /> : <FaMoon />}
+                        <button onClick={changeMode}>
+                            {changeMode ? <FaSun /> : <FaMoon />}
                         </button>
-
 
                         <div>
                             <select className={styles.section}>

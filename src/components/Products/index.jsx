@@ -1,7 +1,5 @@
-import React from "react";
 import styles from "./index.module.css";
-import { useState, useRef } from 'react'
-import { useEffect } from "react";
+import { useState, useRef, useContext, useEffect } from 'react'
 import { NavLink, useNavigate } from "react-router-dom";
 import Loader from "../Loader"
 
@@ -31,6 +29,7 @@ function index() {
         setLoading(false);
       })
   }
+
   useEffect(() => {
     getData()
   }, [])
@@ -44,7 +43,7 @@ function index() {
   const handleFilter = async (e) => {
     e.preventDefault();
     try {
-      const URL = `https://strapi-store-server.onrender.com/api/products?search=${searchInput.current.value}&category=${categorySelect.current.value}&company=${companySelect.current.value}&order=a-z&price=${priceRange.current.value}`;
+      const URL = `https://strapi-store-server.onrender.com/api/products?search=${searchInput.current.value}&category=${categorySelect.current.value}&company=${companySelect.current.value}&order=a-z&price=${priceRange.current.value}&shipping=${freeShippingCheckbox.current.value}`;
       const response = await fetch(URL);
       const data = await response.json();
       setFilter(data.data);
@@ -55,6 +54,7 @@ function index() {
       setLoading(false);
     }
   }
+
   useEffect(() => {
   }, [filter])
 
@@ -77,7 +77,7 @@ function index() {
       const response = await fetch(`https://strapi-store-server.onrender.com/api/products?page=${currentPage}`);
       const data = await response.json();
       setFilter(data.data);
-      setTotalPages(Math.ceil(data.total / data.limit));
+      setTotalPages(3);
       setLoading(false);
       console.log(data);
     } catch (error) {
@@ -85,8 +85,6 @@ function index() {
       setLoading(false);
     }
   };
-  useEffect(() => {
-  }, [filter])
 
   const nextPage = () => {
     setCurrentPage(currentPage + 1);
@@ -125,11 +123,11 @@ function index() {
                 <label>Select Company</label>
                 <select ref={companySelect} className="select select-bordered select-sm w-80 ">
                   <option value="all">All</option>
-                  <option value="Tables">Modenza</option>
-                  <option value="Chairs">Luxora</option>
-                  <option value="Kids">Artifex</option>
-                  <option value="Sofas">Comfora</option>
-                  <option value="Beds">Homestead</option>
+                  <option value="Modenza">Modenza</option>
+                  <option value="Luxora">Luxora</option>
+                  <option value="Artifex">Artifex</option>
+                  <option value="Comfora">Comfora</option>
+                  <option value="Homestead">Homestead</option>
                 </select>
               </div>
               <div className={styles.product}>
@@ -192,7 +190,7 @@ function index() {
             </div>
             {change ? (<div className={styles.wrapper}>
               {
-                Array.isArray(filter) && filter.map((el, index) => {
+                filter && filter.map((el, index) => {
                   return (
                     <div onClick={() => handleClick(el.id)} key={index} className={styles.card}>
                       <div className={styles.card_img}>
@@ -208,7 +206,7 @@ function index() {
               }
             </div>) : (<div className={styles.wrappers}>
               {
-                Array.isArray(filter) && filter.map((el, index) => {
+                filter && filter.map((el, index) => {
                   return (
                     <div onClick={() => handleClick(el.id)} key={index} className={styles.cards}>
                       <div className={styles.card_imgs}>
@@ -227,8 +225,8 @@ function index() {
               }
             </div>)}
             <div className={styles.join}>
-              <button onClick={previousPage} disabled={currentPage === 1} className="join-item btn">Previous</button>
-              <button onClick={nextPage} disabled={currentPage === totalPages} className="join-item btn ">Next</button>
+              <button onClick={previousPage} disabled={currentPage === 1} className="btn btn-outline">Previous</button>
+              <button onClick={nextPage} disabled={currentPage === totalPages} className="btn btn-outline btn-success ">Next</button>
             </div>
           </>
         )

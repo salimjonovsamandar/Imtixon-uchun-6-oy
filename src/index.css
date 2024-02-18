@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --toastify-text-color-light: rgb(57, 78, 106);
+  --toastify-text-color-mood: rgb(248, 248, 242);
+
+/* 
+  --toastify-color-info: #3498db;
+  --toastify-text-color-light: #757575;
+  --toastify-text-color-dark: #fff; */
+}
+.darkMood{
+  /* --toastify-text-color-light: rgb(57, 78, 106); */
+}
 * {
   margin: 0;
   padding: 0;

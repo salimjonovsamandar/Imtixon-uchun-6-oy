@@ -38,6 +38,7 @@
     color: #057aff;
   }
 }
+
 .logo {
   text-decoration: none;
   font-size: 30px;
@@ -45,7 +46,7 @@
   border-radius: 8px;
   font-weight: 600;
   line-height: 36px;
-  color: #dbe1ff;
+  color: var(--toastify-text-color-mood);
   padding: 6px 16px;
   background-color: #057aff;
 }
@@ -73,7 +74,7 @@
   line-height: 1.25rem;
   border: 1px solid #f0f6ff;
   transition: all 0.5s;
-  color: #394e6a;
+  color: var(--toastify-text-color-light);
   &:hover {
     background-color: #d9e3f2;
     border: 1px solid #d9e3f2;

@@ -7,7 +7,7 @@
   margin-left: auto;
   margin-right: auto;
   gap: 10px;
-  background-color: rgb(240, 246, 255);
+  background-color: #f0f6ff;
   margin-top: 80px;
   padding: 16px 20px;
   flex-wrap: wrap;
@@ -21,7 +21,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  color: rgb(57, 78, 106);
+  color: var(--toastify-color-info);
   padding: 8px 4px;
 }
 .price_top {
@@ -220,6 +220,7 @@
   margin-bottom: 50px;
   margin-right: 200px;
   display: flex;
+  gap: 20px;
   align-items: center;
   justify-content: end;
 }

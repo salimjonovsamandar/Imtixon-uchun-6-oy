@@ -15,7 +15,7 @@
   margin-right: 20px;
   font-weight: 700;
   line-height: 1;
-  color: #394e6a;
+  color: var(--toastify-text-color-light);
   letter-spacing: -0.025em;
 }
 
@@ -26,7 +26,7 @@
   font-weight: 700;
   border-radius: 16px;
   letter-spacing: 3.6px;
-  color: #dbe1ff;
+  color: var(--toastify-text-color-mood);
 }
 .p {
   margin-top: 24px;
@@ -37,5 +37,5 @@
   line-height: 32px;
   font-weight: 400;
   letter-spacing: 0%;
-  color: rgb(57, 78, 106);
+  color: var(--toastify-text-color-light);
 }

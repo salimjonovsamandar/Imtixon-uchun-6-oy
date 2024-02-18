@@ -7,8 +7,7 @@ function index() {
             <div className={styles.container}>
                 <h3>Your cart is empty</h3>
             </div>
-            
-        </>
+                    </>
     )
 }
 
