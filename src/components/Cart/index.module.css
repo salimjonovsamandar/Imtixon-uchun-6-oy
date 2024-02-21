@@ -1,16 +1,30 @@
 .container {
   height: 70vh;
-}
-.wrapper {
   width: 100%;
   max-width: 1124px;
   margin: 105px auto;
+}
+.header {
   border-bottom: 1px solid rgb(226, 232, 244);
 }
-.wrapper h3 {
+.header h3 {
   font-size: 30px;
   font-weight: 400;
   line-height: 36px;
   letter-spacing: 1.5px;
   margin-bottom: 20px;
+}
+.card_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 20px;
+  width: 700px;
+  height: 152px;
+}
+.card_wrapper img {
+  width: 128px;
+  height: 128px;
+  border-radius: 20px;
 }

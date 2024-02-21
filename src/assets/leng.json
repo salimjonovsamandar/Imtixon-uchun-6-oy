@@ -3,7 +3,7 @@
     "translation": {
       "we": "We love",
       "product": "products",
-      "empty": "Your cart is empty",
+      "empty": "Shopping Cart",
       "fatured": "Featured Products",
       "mision": "We are changing the way people shop",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore repellat explicabo enim soluta temporibus asperiores aut obcaecati perferendis porro nobis.",
@@ -33,7 +33,7 @@
     "translation": {
       "we": "Biz sevamiz",
       "product": "mahsulotlar",
-      "empty": "Savatingiz boʻsh",
+      "empty": "Xarid savati",
       "fatured": "Tanlangan mahsulotlar",
       "mision": "Biz odamlarning xarid qilish uslubini o'zgartirmoqdamiz",
       "description": "Mijozning o'zi, mijoz kompaniyaning adipissingini davom ettirishi mumkin bo'ladi. Vaqt o'tishi bilan bu bizni qaytarishini tushuntiraman, chunki biz yanada og'irroq yoki ko'r bo'lgan vaqtlarga chidashda davom etamiz.",
@@ -63,7 +63,7 @@
     "translation": {
       "we": "Мы любим",
       "product": "продукты",
-      "empty": "Ваша корзина пуста",
+      "empty": "Корзина",
       "fatured": "Рекомендуемые продукты",
       "mision": "Мы меняем способ совершения покупок",
       "description": "Сам клиент, клиент сможет заниматься развитием компании. Со временем я объясню, что это нас отталкивает, потому что мы продолжим переживать более суровые и более ослепленные времена.",
