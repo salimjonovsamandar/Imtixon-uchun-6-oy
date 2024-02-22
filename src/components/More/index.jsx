@@ -2,11 +2,27 @@ import React, { useEffect, useState, useMemo } from 'react';
 import styles from "./index.module.css";
 import { useParams } from 'react-router-dom';
 import Loader from "../Loader";
+import { useDispatch, useSelector } from "react-redux";
 
 function Index() {
     const { id } = useParams();
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
+
+    const [num, setNum] = useState(1)
+
+    const [info, setInfo] = useState([]);
+    // const location = useLocation();
+    // const id = window.location.search.slice(1);
+
+
+    const card = useSelector(state => state)
+
+    useEffect(() => {
+
+    }, [info]);
+
+    const dispatch = useDispatch()
 
     //Shu yerda useMemo dan foydalanganman
     const fetchData = useMemo(() => {
@@ -27,6 +43,13 @@ function Index() {
     useEffect(() => {
         fetchData();
     }, [fetchData]);
+
+    function add() {
+        if (!info.num) {
+            info.num = Number(num)
+        }
+        dispatch({ type: "ADD", payload: info })
+    }
 
     return (
         <>
@@ -53,7 +76,7 @@ function Index() {
                                     <option key={num + 1} value={num + 1}>{num + 1}</option>
                                 ))}
                             </select>
-                            <button className="btn btn-primary mt-12 mb-12 w-44">ADD TO BAG</button>
+                            <button onClick={add} className="btn btn-primary mt-12 mb-12 w-44">ADD TO BAG</button>
                         </div>
                     </div>
                 </div>

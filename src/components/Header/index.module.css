@@ -89,3 +89,21 @@
   display: flex;
   gap: 20px;
 }
+
+.basket {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.basket p {
+  font-family: sans-serif;
+  position: absolute;
+  top: -9px;
+  left: 19px;
+  color: gray;
+}
+.basket img {
+  width: 20px;
+  height: 20px;
+}
+

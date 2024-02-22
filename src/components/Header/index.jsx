@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import styles from "./index.module.css";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
+
 
 
 function index(darkMode) {
@@ -15,6 +17,14 @@ function index(darkMode) {
             setLanguage(language);
         }
     }, [])
+
+    const cardNum = useSelector(state => state.cards)
+
+    let sumNum = 0
+    cardNum.forEach(element => {
+        sumNum += element.num
+    });
+
     function handleChange(e) {
         setLanguage(e.target.value);
         i18n.changeLanguage(e.target.value);
@@ -57,6 +67,12 @@ function index(darkMode) {
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                             </label>
                         </button>
+                        <NavLink to="/Cart">
+                            <div className={styles.basket}>
+                                <img src="/cart.svg" />
+                                <p>{cardNum.length}</p>
+                            </div>
+                        </NavLink>
                         <div>
                             <select value={language} onChange={handleChange} className={styles.section}>
                                 <option value="en">Eng</option>
