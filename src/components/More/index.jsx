@@ -3,6 +3,7 @@ import styles from "./index.module.css";
 import { useParams } from 'react-router-dom';
 import Loader from "../Loader";
 import { useDispatch, useSelector } from "react-redux";
+import { useLocation } from 'react-router-dom';
 
 function Index() {
     const { id } = useParams();
@@ -12,7 +13,7 @@ function Index() {
     const [num, setNum] = useState(1)
 
     const [info, setInfo] = useState([]);
-    // const location = useLocation();
+    const location = useLocation();
     // const id = window.location.search.slice(1);
 
 
